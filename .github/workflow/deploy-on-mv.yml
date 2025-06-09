@@ -1,5 +1,3 @@
-# .github/workflows/deploy-on-vm.yml
-
 name: Deploy to VM # Tên của workflow, sẽ hiển thị trên tab Actions của GitHub
 
 on:
