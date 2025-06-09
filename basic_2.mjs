@@ -24,12 +24,14 @@ const requestHandler = (requestFromClient, responseToClient) => {
     if (pathname === '/sum') {
         const num1str = queryParams.num1;
         const num2str = queryParams.num2;
+        const num3str = queryParams.num3;
 
         console.log('Đã nhận được num1 (chuỗi):', num1str);
         console.log('Đã nhận được num2 (chuỗi):', num2str);
 
         const num1 = parseFloat(num1str);
         const num2 = parseFloat(num2str);
+        const num3 = parseFloat(num3str);
         console.log(`Sau khi parseFloat: num1 = ${num1} (kiểu: ${typeof num1}), num2 = ${num2} (kiểu: ${typeof num2})`);
 
         // Bây giờ mới kiểm tra isNaN TRƯỚC KHI gửi bất kỳ phản hồi nào cho endpoint /sum
@@ -41,7 +43,7 @@ const requestHandler = (requestFromClient, responseToClient) => {
             }));
         } else {
             // Input hợp lệ, tính tổng và gửi kết quả
-            const sumResult = num1 + num2;
+            const sumResult = num1 + num2 + num3;
             responseToClient.writeHead(200); // 200 OK
             responseToClient.end(JSON.stringify({
                 sum: sumResult,
