@@ -27,7 +27,7 @@ jobs:
       - name: Pull latest code into project directory
         run: |
           echo "Navigating to project directory and pulling latest code..."
-          cd /home/vagrant/another-homework-SET-2025/Basic_API # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
+          cd /home/vagrant/test_action_github # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
           git pull origin main # Đảm bảo 'origin main' là đúng remote và nhánh bạn muốn pull
           echo "✅ Code pulled successfully!"
 
@@ -35,7 +35,7 @@ jobs:
       - name: Install/Update Node.js dependencies
         run: |
           echo "Installing/updating dependencies..."
-          cd /home/vagrant/another-homework-SET-2025/Basic_API # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
+          cd /home/vagrant/test_action_github # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
           # Đảm bảo môi trường Node.js (ví dụ fnm) được thiết lập đúng nếu cần
           # Ví dụ nếu fnm không tự load trong môi trường non-interactive script:
           # export PATH="/home/vagrant/.local/share/fnm:$PATH" # Đường dẫn fnm của bạn
@@ -61,8 +61,5 @@ jobs:
 
           echo "Starting new process..."
           cd /home/vagrant/another-homework-SET-2025/Basic_API # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
-          # Chạy lại ứng dụng ở chế độ nền (background) và ghi log
-          # Đảm bảo user 'vagrant' có quyền ghi vào app.log ở thư mục đó.
           nohup node Basic_2.mjs > app.log 2>&1 &
           echo "✅ Application restart initiated. Check app.log for details."
-          # Để kiểm tra: ps aux | grep Basic_2.mjs
