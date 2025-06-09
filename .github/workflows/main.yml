@@ -60,6 +60,6 @@ jobs:
           sleep 2 # Chờ một chút để port được giải phóng
 
           echo "Starting new process..."
-          cd /home/vagrant/another-homework-SET-2025/Basic_API # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
+          cd /home/vagrant/test_action_github # <--- THAY THẾ BẰNG ĐƯỜNG DẪN ĐÚNG CỦA BẠN
           nohup node Basic_2.mjs > app.log 2>&1 &
           echo "✅ Application restart initiated. Check app.log for details."
