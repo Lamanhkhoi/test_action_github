@@ -60,9 +60,9 @@ const requestHandler = (requestFromClient, responseToClient) => {
 };
 
 const server = http.createServer(requestHandler);
-const PORT = 3000; // Viết hoa hằng số
+const PORT = 3000;
 
 server.listen(PORT, () => {
-    console.log(`Server đang chạy tại http://localhost:${PORT}`); // Sửa lỗi đánh máy
+    console.log(`Server đang chạy tại http://localhost:${PORT}`); 
     console.log('API sum: /sum?num1=X&num2=Y');
 });
