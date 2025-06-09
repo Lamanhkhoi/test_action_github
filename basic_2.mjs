@@ -64,5 +64,5 @@ const PORT = 3000; // Viết hoa hằng số
 
 server.listen(PORT, () => {
     console.log(`Server đang chạy tại http://localhost:${PORT}`); // Sửa lỗi đánh máy
-    console.log('  API tính tổng: /sum?num1=X&num2=Y');
+    console.log('API sum: /sum?num1=X&num2=Y');
 });
